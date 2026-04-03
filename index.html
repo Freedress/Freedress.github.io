@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>APRIL甜蜜60天$566買2送8</title>
+
 <style>
 body {
   margin: 0;
@@ -24,23 +25,27 @@ body {
   background: #ffffff;
   border-radius: 20px;
   padding: 20px;
-  margin-top: 20px; /* 與圖片間距 */
+  margin-top: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
 .title {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 .price-old {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
 .price-new {
   font-size: 32px;
   font-weight: bold;
   color: #e11d48;
 }
+
 .highlight {
   color: #f59e0b;
   font-weight: bold;
@@ -61,24 +66,25 @@ body {
   cursor: pointer;
 }
 
-/* 移除 a 下劃線 */
-a#whatsappBtn,
-a#whatsappBtn:visited,
-a#whatsappBtn:hover,
-a#whatsappBtn:active {
+/* 移除所有 a 的藍線 */
+a {
   text-decoration: none;
   color: inherit;
+}
+a img {
+  border: none;
+  display: block;
 }
 
 /* 圖片 */
 img {
   width: 100%;
   display: block;
+  margin: 0;
   border-radius: 0;
-  margin: 0; /* 保证图片紧贴无缝 */
 }
 
-/* 圓角效果 */
+/* 圓角 */
 .top-rounded {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -86,31 +92,38 @@ img {
 .bottom-rounded {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-bottom: 20px; /* 與卡片間距 */
+  margin-bottom: 20px;
 }
 </style>
+
 </head>
+
 <body>
 
 <div class="container">
 
-  <!-- 頂部多張圖片 -->
-  <img src="banner.jpg" alt="頂部橫幅" class="top-rounded">
-  <img src="banner1.jpg" alt="頂部橫幅">
-  <img src="banner2.jpg" alt="頂部橫幅">
-  <img src="banner3.jpg" alt="頂部橫幅">
-  <img src="banner4.jpg" alt="頂部橫幅">
-  <img src="banner5.jpg" alt="頂部橫幅">
-  <img src="banner6.jpg" alt="頂部橫幅">
-  <img src="banner7.jpg" alt="頂部橫幅">
-  <img src="banner8.jpg" alt="頂部橫幅" class="bottom-rounded">
+  <!-- 頂部圖片 -->
+  <img src="banner.jpg" class="top-rounded">
+  <img src="banner1.jpg">
+  <img src="banner2.jpg">
+  <img src="banner3.jpg">
+  <img src="banner4.jpg">
+  <img src="banner5.jpg">
+  <img src="banner6.jpg">
+  <img src="banner7.jpg">
 
-  <!-- 內容卡片 -->
+  <!-- ⭐ 這張可以點擊跳轉 -->
+  <a href="https://www.freedress.store/" target="_blank" rel="noopener noreferrer">
+    <img src="banner8.jpg" class="bottom-rounded">
+  </a>
+
+  <!-- 卡片 -->
   <div class="card">
     <div class="title">✨ 套裝內容 · 三大療癒角色</div>
     <p>🌼 洋甘菊舒敏水 $138 —— 安定者（5分鐘退紅、降溫、抗炎）</p>
     <p>🛡️ 雙紫精華油 $428 —— 守護者（修復屏障、從根源穩定）</p>
     <p>🍯 免費送 8片蜜糖面膜 —— 甜蜜陪伴者（價值$384）</p>
+
     <div class="title">💎 60天 · 重建・鞏固・煥亮</div>
     <p>肌膚細胞更新週期約28天，配合後續鞏固期，</p>
     <p>完成完整「重建・鞏固・煥亮」週期。</p>
@@ -122,8 +135,11 @@ img {
     <p class="price-old">原價 $950</p>
     <p class="price-new">$566</p>
     <p class="highlight">買2送8(總價值$384) · 限量50套</p>
+
     <div class="title">📝 立即領取優惠</div>
-    <a href="https://wa.me/85251675936" target="_blank" id="whatsappBtn">
+
+    <!-- WhatsApp 按鈕（原位置） -->
+    <a href="https://wa.me/85251675936" target="_blank" rel="noopener noreferrer" id="whatsappBtn">
       <button class="button">📱 立即領取優惠(WhatsApp)</button>
     </a>
   </div>
@@ -131,10 +147,8 @@ img {
 </div>
 
 <script>
-// 页面加载日志
 console.log("✅ 页面已加载完成");
 
-// 图片加载检测
 document.querySelectorAll("img").forEach((img, index) => {
   img.addEventListener("load", () => {
     console.log(`🖼️ 图片${index + 1}加载成功: ${img.src}`);
@@ -144,14 +158,11 @@ document.querySelectorAll("img").forEach((img, index) => {
   });
 });
 
-// WhatsApp按钮点击日志
 const btn = document.getElementById("whatsappBtn");
 if (btn) {
   btn.addEventListener("click", () => {
     console.log("📲 用户点击了 WhatsApp 按钮");
   });
-} else {
-  console.warn("⚠️ 找不到 WhatsApp 按钮");
 }
 </script>
 
