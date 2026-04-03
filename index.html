@@ -46,12 +46,36 @@ body {
   font-weight: bold;
 }
 
+/* 按鈕 */
+.button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+  background: #25D366;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* 移除 a 下劃線 */
+a#whatsappBtn,
+a#whatsappBtn:visited,
+a#whatsappBtn:hover,
+a#whatsappBtn:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* 圖片 */
 img {
   width: 100%;
   display: block;
-  margin: 0;        /* 無間隙 */
   border-radius: 0;
+  margin: 0; /* 保证图片紧贴无缝 */
 }
 
 /* 圓角效果 */
@@ -63,28 +87,6 @@ img {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-bottom: 20px; /* 與卡片間距 */
-}
-
-/* WhatsApp 浮動圓形按鈕 */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  line-height: 60px; /* 垂直置中 */
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  z-index: 9999;
-  text-decoration: none; /* 移除藍線 */
-  transition: transform 0.2s;
-}
-.whatsapp-float:hover {
-  transform: scale(1.1);
 }
 </style>
 </head>
@@ -121,12 +123,12 @@ img {
     <p class="price-new">$566</p>
     <p class="highlight">買2送8 · 總價值$384 · 限量50套</p>
     <div class="title">📝 立即領取優惠</div>
+    <a href="https://wa.me/85251675936" target="_blank" id="whatsappBtn">
+      <button class="button">📱 立即領取優惠(WhatsApp)</button>
+    </a>
   </div>
 
 </div>
-
-<!-- WhatsApp 固定浮動按鈕 -->
-<a href="https://wa.me/85251675936" target="_blank" class="whatsapp-float">📱</a>
 
 <script>
 // 页面加载日志
@@ -141,6 +143,16 @@ document.querySelectorAll("img").forEach((img, index) => {
     console.error(`❌ 图片${index + 1}加载失败: ${img.src}`);
   });
 });
+
+// WhatsApp按钮点击日志
+const btn = document.getElementById("whatsappBtn");
+if (btn) {
+  btn.addEventListener("click", () => {
+    console.log("📲 用户点击了 WhatsApp 按钮");
+  });
+} else {
+  console.warn("⚠️ 找不到 WhatsApp 按钮");
+}
 </script>
 
 </body>
