@@ -5,30 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>APRIL甜蜜60天$566買2送8</title>
 
-<!-- ✅ Meta Pixel 完整版 -->
+<!-- ✅ Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}
-(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-// ✅ 你的 Pixel ID（已帮你填好）
 fbq('init', '1626341595154437');
 
-// ✅ 页面浏览 + 内容浏览
+// 页面事件
 fbq('track', 'PageView');
 fbq('track', 'ViewContent');
 </script>
 
-<!-- ✅ 修复后的 noscript -->
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1626341595154437&ev=PageView&noscript=1"/>
@@ -41,79 +35,82 @@ body {
   background: #fff7ed;
   color: #333;
 }
+
 .container {
-  padding: 20px;
   max-width: 500px;
   margin: auto;
+  padding: 20px;
 }
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.top-rounded {
+  border-radius: 20px 20px 0 0;
+}
+
+.bottom-rounded {
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 20px;
+}
+
 .card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 20px;
   padding: 20px;
   margin-top: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
 .title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 .price-old {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
 .price-new {
   font-size: 32px;
-  font-weight: bold;
   color: #e11d48;
+  font-weight: bold;
 }
+
 .highlight {
   color: #f59e0b;
   font-weight: bold;
 }
+
 .button {
-  display: block;
   width: 100%;
   padding: 15px;
   border-radius: 14px;
   border: none;
   background: #25D366;
-  color: white;
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
-  margin-top: 15px;
   cursor: pointer;
+  margin-top: 15px;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
-a img {
-  border: none;
-  display: block;
-}
-img {
-  width: 100%;
-  display: block;
-  margin: 0;
-}
-.top-rounded {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.bottom-rounded {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin-bottom: 20px;
-}
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
+  <!-- 图片区 -->
   <img src="banner.jpg" class="top-rounded">
   <img src="banner1.jpg">
   <img src="banner2.jpg">
@@ -123,55 +120,45 @@ img {
   <img src="banner6.jpg">
   <img src="banner7.jpg">
 
-  <!-- ✅ 点击官网（加追踪） -->
+  <!-- 点击官网 -->
   <a href="https://www.freedress.store/" target="_blank" id="shopLink">
     <img src="banner8.jpg" class="bottom-rounded">
   </a>
 
+  <!-- 产品介绍 -->
   <div class="card">
-    <div class="title">✨ 套裝內容 · 三大療癒角色</div>
+    <div class="title">✨ 套裝內容</div>
     <p>🌼 洋甘菊舒敏水 $138</p>
     <p>🛡️ 雙紫精華油 $428</p>
-    <p>🍯 免費送 8片蜜糖面膜</p>
+    <p>🍯 蜜糖面膜 ×8（免費）</p>
 
-    <div class="title">💎 60天 · 重建・鞏固・煥亮</div>
-    <p class="highlight">4月開始養膚，6月前見效！</p>
+    <div class="title">💎 60天養膚周期</div>
+    <p class="highlight">現在開始，夏天前改善膚質！</p>
   </div>
 
+  <!-- 价格+行动 -->
   <div class="card">
     <div class="title">🔥 限時優惠</div>
-    <p class="price-old">原價 $950</p>
+    <p class="price-old">$950</p>
     <p class="price-new">$566</p>
 
-    <!-- ✅ WhatsApp（最重要转化） -->
     <a href="https://wa.me/85251675936" target="_blank" id="whatsappBtn">
-      <button class="button">📱 立即領取優惠(WhatsApp)</button>
+      <button class="button">📱 WhatsApp 立即領取</button>
     </a>
   </div>
 
 </div>
 
 <script>
-// 页面加载
-console.log("✅ 页面已加载完成");
+// 📲 WhatsApp点击 = Lead（核心转化）
+document.getElementById("whatsappBtn")?.addEventListener("click", function () {
+  fbq('track', 'Lead');
+});
 
-// 📲 WhatsApp点击 = Lead（最关键）
-const wa = document.getElementById("whatsappBtn");
-if (wa) {
-  wa.addEventListener("click", () => {
-    console.log("📲 点击 WhatsApp");
-    fbq('track', 'Lead');
-  });
-}
-
-// 🛒 点击官网 = 加强购买意图
-const shop = document.getElementById("shopLink");
-if (shop) {
-  shop.addEventListener("click", () => {
-    console.log("🛒 点击官网");
-    fbq('track', 'InitiateCheckout');
-  });
-}
+// 🛒 点击官网 = 购买意图
+document.getElementById("shopLink")?.addEventListener("click", function () {
+  fbq('track', 'InitiateCheckout');
+});
 </script>
 
 </body>
