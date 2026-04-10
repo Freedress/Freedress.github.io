@@ -5,6 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>APRIL甜蜜60天$566買2送8</title>
 
+<!-- ✅ Meta Pixel 完整版 -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+// ✅ 你的 Pixel ID（已帮你填好）
+fbq('init', '1626341595154437');
+
+// ✅ 页面浏览 + 内容浏览
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
+
+<!-- ✅ 修复后的 noscript -->
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1626341595154437&ev=PageView&noscript=1"/>
+</noscript>
+
 <style>
 body {
   margin: 0;
@@ -12,15 +41,11 @@ body {
   background: #fff7ed;
   color: #333;
 }
-
-/* 容器 */
 .container {
   padding: 20px;
   max-width: 500px;
   margin: auto;
 }
-
-/* 卡片 */
 .card {
   background: #ffffff;
   border-radius: 20px;
@@ -28,30 +53,24 @@ body {
   margin-top: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
-
 .title {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .price-old {
   text-decoration: line-through;
   opacity: 0.6;
 }
-
 .price-new {
   font-size: 32px;
   font-weight: bold;
   color: #e11d48;
 }
-
 .highlight {
   color: #f59e0b;
   font-weight: bold;
 }
-
-/* 按鈕 */
 .button {
   display: block;
   width: 100%;
@@ -65,8 +84,6 @@ body {
   margin-top: 15px;
   cursor: pointer;
 }
-
-/* 移除所有 a 的藍線 */
 a {
   text-decoration: none;
   color: inherit;
@@ -75,16 +92,11 @@ a img {
   border: none;
   display: block;
 }
-
-/* 圖片 */
 img {
   width: 100%;
   display: block;
   margin: 0;
-  border-radius: 0;
 }
-
-/* 圓角 */
 .top-rounded {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -102,7 +114,6 @@ img {
 
 <div class="container">
 
-  <!-- 頂部圖片 -->
   <img src="banner.jpg" class="top-rounded">
   <img src="banner1.jpg">
   <img src="banner2.jpg">
@@ -112,34 +123,28 @@ img {
   <img src="banner6.jpg">
   <img src="banner7.jpg">
 
-  <!-- ⭐ 這張可以點擊跳轉 -->
-  <a href="https://www.freedress.store/" target="_blank" rel="noopener noreferrer">
+  <!-- ✅ 点击官网（加追踪） -->
+  <a href="https://www.freedress.store/" target="_blank" id="shopLink">
     <img src="banner8.jpg" class="bottom-rounded">
   </a>
 
-  <!-- 卡片 -->
   <div class="card">
     <div class="title">✨ 套裝內容 · 三大療癒角色</div>
-    <p>🌼 洋甘菊舒敏水 $138 —— 安定者（5分鐘退紅、降溫、抗炎）</p>
-    <p>🛡️ 雙紫精華油 $428 —— 守護者（修復屏障、從根源穩定）</p>
-    <p>🍯 免費送 8片蜜糖面膜 —— 甜蜜陪伴者（價值$384）</p>
+    <p>🌼 洋甘菊舒敏水 $138</p>
+    <p>🛡️ 雙紫精華油 $428</p>
+    <p>🍯 免費送 8片蜜糖面膜</p>
 
     <div class="title">💎 60天 · 重建・鞏固・煥亮</div>
-    <p>肌膚細胞更新週期約28天，配合後續鞏固期，</p>
-    <p>完成完整「重建・鞏固・煥亮」週期。</p>
-    <p class="highlight">4月開始養膚，6月盛夏前養出健康透亮肌底！</p>
+    <p class="highlight">4月開始養膚，6月前見效！</p>
   </div>
 
   <div class="card">
     <div class="title">🔥 限時優惠</div>
     <p class="price-old">原價 $950</p>
     <p class="price-new">$566</p>
-    <p class="highlight">買2送8(總價值$384) · 限量50套</p>
 
-    <div class="title">📝 立即領取優惠</div>
-
-    <!-- WhatsApp 按鈕（原位置） -->
-    <a href="https://wa.me/85251675936" target="_blank" rel="noopener noreferrer" id="whatsappBtn">
+    <!-- ✅ WhatsApp（最重要转化） -->
+    <a href="https://wa.me/85251675936" target="_blank" id="whatsappBtn">
       <button class="button">📱 立即領取優惠(WhatsApp)</button>
     </a>
   </div>
@@ -147,21 +152,24 @@ img {
 </div>
 
 <script>
+// 页面加载
 console.log("✅ 页面已加载完成");
 
-document.querySelectorAll("img").forEach((img, index) => {
-  img.addEventListener("load", () => {
-    console.log(`🖼️ 图片${index + 1}加载成功: ${img.src}`);
+// 📲 WhatsApp点击 = Lead（最关键）
+const wa = document.getElementById("whatsappBtn");
+if (wa) {
+  wa.addEventListener("click", () => {
+    console.log("📲 点击 WhatsApp");
+    fbq('track', 'Lead');
   });
-  img.addEventListener("error", () => {
-    console.error(`❌ 图片${index + 1}加载失败: ${img.src}`);
-  });
-});
+}
 
-const btn = document.getElementById("whatsappBtn");
-if (btn) {
-  btn.addEventListener("click", () => {
-    console.log("📲 用户点击了 WhatsApp 按钮");
+// 🛒 点击官网 = 加强购买意图
+const shop = document.getElementById("shopLink");
+if (shop) {
+  shop.addEventListener("click", () => {
+    console.log("🛒 点击官网");
+    fbq('track', 'InitiateCheckout');
   });
 }
 </script>
