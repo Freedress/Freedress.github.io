@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>APRIL甜蜜60天$566買2送8</title>
-  
+
 <style>
 body {
   margin: 0;
@@ -81,6 +82,35 @@ a {
   color: inherit;
 }
 </style>
+
+<!-- ✅ Meta Pixel（修复+标准版） -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1626341595154437');
+
+// 页面事件
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1626341595154437&ev=PageView&noscript=1"/>
+</noscript>
+
 </head>
 
 <body>
@@ -88,6 +118,7 @@ a {
 <div class="container">
 
   <!-- 图片区 -->
+
   <img src="banner.jpg" class="top-rounded">
   <img src="banner1.jpg">
   <img src="banner2.jpg">
@@ -98,43 +129,67 @@ a {
   <img src="banner7.jpg">
 
   <!-- 点击官网 -->
+
   <a href="https://www.freedress.store/" target="_blank" id="shopLink">
     <img src="banner8.jpg" class="bottom-rounded">
   </a>
 
   <!-- 产品介绍 -->
+
   <div class="card">
     <div class="title">✨ 套裝內容</div>
     <p>🌼 洋甘菊舒敏水 $138</p>
     <p>🛡️ 雙紫精華油 $428</p>
     <p>🍯 蜜糖面膜 ×8（免費）</p>
 
-    <div class="title">💎 60天養膚周期</div>
-    <p class="highlight">現在開始，夏天前改善膚質！</p>
+```
+<div class="title">💎 60天養膚周期</div>
+<p class="highlight">現在開始，夏天前改善膚質！</p>
+```
+
   </div>
 
   <!-- 价格+行动 -->
+
   <div class="card">
     <div class="title">🔥 限時優惠</div>
     <p class="price-old">$950</p>
     <p class="price-new">$566</p>
 
-    <a href="https://wa.me/85251675936" target="_blank" id="whatsappBtn">
-      <button class="button">📱 WhatsApp 立即領取</button>
-    </a>
+```
+<a href="https://wa.me/85251675936" target="_blank" id="whatsappBtn">
+  <button class="button">📱 WhatsApp 立即領取</button>
+</a>
+```
+
   </div>
 
 </div>
 
 <script>
-// 📲 WhatsApp点击 = Lead（核心转化）
+// 📱 WhatsApp点击 = 转化（改为Contact + 防报错）
 document.getElementById("whatsappBtn")?.addEventListener("click", function () {
-  fbq('track', 'Lead');
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Contact');
+  }
 });
 
-// 🛒 点击官网 = 购买意图
+// 🛒 官网点击 = 购买意图（防报错）
 document.getElementById("shopLink")?.addEventListener("click", function () {
-  fbq('track', 'InitiateCheckout');
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'InitiateCheckout');
+  }
+});
+
+// 📊 滚动追踪（增强学习）
+let tracked = false;
+window.addEventListener('scroll', function () {
+  if (!tracked && window.scrollY > 300) {
+    tracked = true;
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Scroll');
+    }
+  }
 });
 </script>
 
